@@ -1,0 +1,161 @@
+/* @override http://mcthias-2.local:8888/scripte_2010/meta/themes/theme_thias/c/pretty.css */
+
+/*
+
+    iPad-Swipe
+    ---------------------
+
+    @file       pretty.css
+    @version    1.0
+    @date       2010-10-06
+    @author         Matthias Edler-Golla <meg@wachenfeld-golla.de>
+
+    Copyright (c) 2010 Wachenfeld + Golla, Buero fuer Gestaltung <http://wachenfeld-golla.de>
+
+	hier alle angaben, die das AUSSEHEN der verschiedenen themes beeinflusst!
+*/
+
+body {
+    color: #333;
+	background: #f0f3f5 url(../p/rauschen_HG.gif);
+    font-family: Georgia, Times, serif;
+}
+
+h1 {
+    font-size: 166%;
+}
+
+h1#titel {
+    font-style: italic;
+}
+
+h2#Seitenanzeige {
+    /*font-family: LeagueGothicRegular,Arial,Sans-Serif;*/
+    font-size: 160%;
+    /*color: #dfe2e4;*/
+    
+}
+
+h2#Seitenanzeige strong {
+	font-weight: normal;
+}
+
+h2#Seitenanzeige span {
+	
+}
+
+div#inhaltsangabe {
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+}
+
+div#inhaltsangabe a:link,
+div#inhaltsangabe a:visited {
+    color: #fff;
+}
+
+div#inhaltsangabe a:active,
+div#inhaltsangabe a:focus {
+    background-color: #ccc;
+}
+
+/* @group article */
+
+article {
+    background-color: #fff;
+    padding: 1em;
+}
+
+article.sichtbar {
+    border: 2px solid #e9edef;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    border-radius: .4em;
+}
+
+article a:link,
+article a:visited {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px dotted #a7a7a7;
+}
+
+article a:visited {
+    color: #666767;
+}
+
+article a:hover,
+article a:active,
+article a:focus {
+    border-bottom: 1px solid;
+}
+
+article > h1 {
+    font-family: LeagueGothicRegular,Impact,Arial,Sans-Serif;
+    margin-bottom: .5em;
+    line-height: 1.1;
+    font-size:180%;
+}
+
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+    font-weight: bold;
+    margin-top: 1.4em;
+}
+
+article figcaption p {
+    font-style: italic;
+    font-size: 75%;
+    text-align: right;
+}
+
+/* @end */
+
+article ul {
+    list-style-type: circle;
+}
+
+article ol {
+	list-style-type: decimal;
+}
+
+article div.source {
+    background-color: #e7e8fb;
+    border: 2px solid #e9edef;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    border-radius: .4em;
+    font: 90%/1.4 "Courier New", Courier, mono;
+    color: #000;
+}
+
+pre {
+    font: 90%/1.4 "Courier New", Courier, mono;
+    color: #000;
+}
+
+article span.code {
+    color: #e70000;
+}
+
+article div.demo {
+    background-color: #f0f3f5;
+    border: 2px solid #e9edef;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    border-radius: .4em;
+}
+
+article div.demo h2 {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 640px) { 
+    div#inhaltsangabe h1.aktiv {
+        color: #ff8f67;
+    }
+}
+
