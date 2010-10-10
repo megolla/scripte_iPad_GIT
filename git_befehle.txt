@@ -1,0 +1,16 @@
+Git-Commands:
+
+in den richtigen Ordner wechseln:
+cd ../../../Applications/MAMP/htdocs/scripte_iPad_GIT
+
+Wie schaut der Status aus:
+git status
+
+Eine neue Branch anlegen:
+git branch NeuerName
+
+Auf welcher Branch befindet man sich gerade:
+git branch
+
+zu einer anderen Branch wechseln:
+git checkout NeuerName
