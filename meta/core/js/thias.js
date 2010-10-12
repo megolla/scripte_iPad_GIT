@@ -46,16 +46,29 @@ $(function(){
 			zurueckGehen();
 		}
 		
-		if (event.keyCode == '32') { //Space
+		if (event.keyCode == '32') { // Space
 			$('div#inhaltsangabe').toggle('fast');
 			return false;
 		}
 		
-		if (event.keyCode == '48') { //Null
+		if (event.keyCode == '48') { // Null
 			$('article:not(:first)').hide().removeClass('sichtbar');
 			$('article:first').fadeIn(600).addClass('sichtbar');
 			warnungVerbergen();
 			aktuelleArtikelNummerEintragen();
+		}
+		
+		// fuegt dem gerade sichtbaren article die Klasse "pointerCursor" hinzu oder wieder weg
+		// wenn "pointerCursor" aktiv ist, wird bei den Webkit-Browsern ein großer Pfeil als Cursor sichtbar
+		// mit dem man gut deuten kann - dieser wird via CSS eingefuegt!
+		if (event.keyCode == '67') { // C
+			var c = $('article').attr('class');
+			//alert (c);
+			if (c.indexOf('pointerCursor')!=-1){
+				$('article.sichtbar').removeClass('pointerCursor');
+			} else {
+				$('article.sichtbar').addClass('pointerCursor');
+			}
 		}
 	});
 

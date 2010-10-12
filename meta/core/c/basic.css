@@ -1,4 +1,4 @@
-/* @override http://mcthias-2.local:8888/scripte_2010/meta/core/c/basic.css */
+/* @override http://mcthias-2.local:8888/scripte_iPad_GIT/meta/core/c/basic.css */
 
 /*
 
@@ -7,7 +7,7 @@
 
     @file       basic.css
     @version    1.0
-    @date       2010-10-06
+    @date       2010-10-12
     @author         Matthias Edler-Golla <meg@wachenfeld-golla.de>
 
     Copyright (c) 2010 Wachenfeld + Golla, Buero fuer Gestaltung <http://wachenfeld-golla.de>
@@ -28,7 +28,6 @@ html {
 
 body {
 	font: 62.5%/1.4 Georgia,Times,Serif;
-	cursor:url(../p/icons/weiterCursor.gif), url(../p/icons/weiterCursor.ico), url(../p/icons/weiterCursor.cur), e-resize;
 }
 
 h1 {
@@ -202,7 +201,12 @@ article {
 }
 
 html.jsAktiv article {
-	 /* cursor:url(../p/icons/weiterCursor.gif), url(../p/icons/weiterCursor.ico), url(../p/icons/weiterCursor.cur), e-resize; */
+	cursor:url(../p/icons/weiterCursor.gif), url(../p/icons/weiterCursor.ico), url(../p/icons/weiterCursor.cur), e-resize; 
+}
+
+/* klasse "pointerCursor" wird via jQuery eingefuegt */
+html.jsAktiv article.pointerCursor {
+	cursor:url(../p/icons/pointerCursor.gif), default; 
 }
 
 article a[href*="//"] {

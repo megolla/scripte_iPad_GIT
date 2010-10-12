@@ -6,6 +6,15 @@ cd ../../../Applications/MAMP/htdocs/scripte_iPad_GIT
 Wie schaut der Status aus:
 git status
 
+Neue Dateien hinzufügen:
+alle Dateien: git add .
+nur eine spezielle: git add dateiName.ext
+
+Änderungen usw. direkt commiten (ohne staging):
+git commit -a -m "hier den kommentar einfügen – ganz wichtig!"
+
+mehr dazu: http://progit.org/book/ch2-2.html
+
 Eine neue Branch anlegen:
 git branch NeuerName
 
@@ -14,3 +23,8 @@ git branch
 
 zu einer anderen Branch wechseln:
 git checkout NeuerName
+
+log-datei mit schnell-übersicht:
+git log --graph --all --oneline
+
+
