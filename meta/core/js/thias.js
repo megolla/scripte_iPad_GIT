@@ -5,7 +5,7 @@
 
 	@file 		thias.js
 	@version 	1.0
-	@date 		2010-10-05
+	@date 		2010-10-12
 	@author 	Matthias Edler-Golla <meg@wachenfeld-golla.de>
 
 	Copyright (c) 2010 Wachenfeld + Golla, Buero fuer Gestaltung <http://wachenfeld-golla.de>
