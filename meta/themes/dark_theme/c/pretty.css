@@ -1,8 +1,8 @@
-/* @override http://mcthias-2.local:8888/scripte_iPad_GIT/meta/themes/theme_thias/c/pretty.css */
+/* @override http://mcthias-2.local:8888/scripte_iPad_GIT/meta/themes/dark_theme/c/pretty.css */
 
 /*
 
-   theme_thias
+    dark theme
     ---------------------
 
     @file       pretty.css
@@ -15,25 +15,28 @@
 	hier alle angaben, die das AUSSEHEN der verschiedenen themes beeinflusst!
 */
 
+html {
+	background-color: #2A2A2B;
+}
+
 body {
-    color: #333;
-	background: #f0f3f5 url(../p/rauschen_HG.gif);
-    font-family: Georgia, Times, serif;
+	margin-top: 8px;
+    color: #f3f5f5;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#595A5C), to(#2A2A2B));
+	background-image:-moz-linear-gradient(53% 37% 270deg,#595A5C, #2A2A2B);
+    font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
 }
 
 h1 {
-    font-size: 166%;
+    font-size: 150%;
 }
 
 h1#titel {
-    font-style: italic;
+    color: #bbbcbe;
 }
 
 h2#Seitenanzeige {
-    /*font-family: LeagueGothicRegular,Arial,Sans-Serif;*/
-    font-size: 160%;
-    /*color: #dfe2e4;*/
-    
+    font-size: 160%;   
 }
 
 h2#Seitenanzeige strong {
@@ -45,13 +48,13 @@ h2#Seitenanzeige span {
 }
 
 div#inhaltsangabe {
-    background-color: rgba(0,0,0,0.8);
-    color: #fff;
+    background-color: rgba(255,255,255,0.92);
+    color: #444;
 }
 
 div#inhaltsangabe a:link,
 div#inhaltsangabe a:visited {
-    color: #fff;
+    color: #444;
 }
 
 div#inhaltsangabe a:active,
@@ -60,29 +63,30 @@ div#inhaltsangabe a:focus {
 }
 
 html.jsAktiv p#back {
-	border: 2px solid rgba(255,255,255,.5);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+	border: 2px solid rgba(255,255,255,.1);
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 html.jsAktiv p#back:hover,
 html.jsAktiv p#back:focus,
 html.jsAktiv p#back:active {
-    background-color: rgba(255,255,255,.6);
-    border: 2px solid rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.1);
+    border: 2px solid rgba(255,255,255,.3);
 }
 
 html.jsAktiv div#index {
 	display: block;
     position: absolute;
     right: .2em;
-    top: -2px;
+    top: 3px;
     width: 8.4em;
     border: 2px solid rgba(255,255,255,0);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-width: 0 2px 2px 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
@@ -90,33 +94,36 @@ html.jsAktiv div#index:hover,
 html.jsAktiv div#index:focus,
 html.jsAktiv div#index:active {
     opacity: 1;
-    background-color: rgba(255,255,255,.6);
-    border: 2px solid rgba(255,255,255,.8);
+    border-color: rgba(255,255,255,.2);
 }
 
 /* @group article */
 
 article {
     background-color: #fff;
+    color: #444;
     padding: 1em;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 article.sichtbar {
-    border: 2px solid #e9edef;
-    -webkit-border-radius: .4em;
-    -moz-border-radius: .4em;
-    border-radius: .4em;
+    /*border: 2px solid #e6ecee;*/
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
 }
 
 article a:link,
 article a:visited {
-    color: #333;
+    color: #444;
     text-decoration: none;
-    border-bottom: 1px dotted #a7a7a7;
+    border-bottom: 1px dotted #444;
 }
 
 article a:visited {
-    color: #666767;
+    color: #666868;
 }
 
 article a:hover,
@@ -143,7 +150,7 @@ article h6 {
 
 article figcaption  {
     font-size: 80%;
-    font-style: italic;
+    text-align: right;
 }
 
 /* @end */
@@ -157,11 +164,11 @@ article ol {
 }
 
 article div.source {
-    background-color: #e7e8fb;
-    border: 2px solid #e9edef;
-    -webkit-border-radius: .4em;
-    -moz-border-radius: .4em;
-    border-radius: .4em;
+    background-color: #fff;
+    border: 1px solid #e70000;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
     font: 90%/1.4 "Courier New", Courier, mono;
     color: #000;
 }
@@ -176,11 +183,15 @@ article span.code {
 }
 
 article div.demo {
-    background-color: #f0f3f5;
-    border: 2px solid #e9edef;
-    -webkit-border-radius: .4em;
-    -moz-border-radius: .4em;
-    border-radius: .4em;
+    background-color: #fff;
+    border: 1px solid #b4b6b6;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+    -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+-moz-box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 6px;
+box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 article div.demo h2 {
@@ -188,11 +199,11 @@ article div.demo h2 {
 }
 
 div#warnung p {
-	background-color: rgba(81,132,186,0.7);
-    border: 3px solid rgba(81,132,186,0.61);
-    -webkit-border-radius: .4em;
-    -moz-border-radius: .4em;
-    border-radius: .4em;
+	background-color: rgba(90,90,90,0.9);
+    border: 3px solid rgba(90,90,90,0.4);
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 2px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
