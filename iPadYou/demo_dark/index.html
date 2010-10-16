@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang=de>
+<!-- <html lang=de manifest="../../manifest.php"> -->
+<head>
+<meta charset=utf-8>
+<title>XXXX 01 // 10-2010 // iPadYou // Dark Theme</title>
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<!-- http://maisonbisson.com/blog/post/13148/mobile-safari-advanced-features/ -->
+<!-- verhindert das zeigen des safari-chromes auf dem iPhone -->
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<link rel="apple-touch-icon" href="../../meta/apple-touch-icon.png" />
+<link rel="shortcut icon" href="../../meta/favicon.ico" />
+
+<!--[if !IE 6]><!--> 
+<link rel="stylesheet" media="all" href="../../meta/core/c/reset.css" />
+<link rel="stylesheet" media="all" href="../../meta/themes/dark_theme/f/League/stylesheet.css" />
+<link rel="stylesheet" media="all" href="../../meta/core/c/basic.css" />
+<link rel="stylesheet" media="all" href="../../meta/themes/dark_theme/c/pretty.css" />
+<link rel="stylesheet" media="print" href="../../meta/core/c/print.css" />
+<!--<![endif]-->
+		
+</head>
+<body>
+
+<!--[if IE ]>
+<p style="background-color:red;color:#fff;padding:1em;text-align:center;font-size:2.1em;">Sorry, aber die Präsentation läuft nicht mit dem Internet Explorer!<br />Bitte verwenden Sie einen <strong>modernen Browser</strong> (Firefox, Google Chrome, Safari, Opera …)</p>
+<![endif]-->
+
+<h1 id="titel">XXXX 01 / 10-2010 / © iPadYouToo // Dark Theme</h1>
+
+<hr />
+
+<div id="index" title="Übersicht aller Seiten dieser Präsentation">
+<h2 id="Seitenanzeige"><span></span> | <strong></strong></h2>
+<hr />
+<div id="inhaltsangabe"></div>
+</div><!-- /index -->
+
+<hr />
+
+<div id="wrap">
+
+<p id="back" title="eine Seite zurück">&#160;</p><hr />
+
+<hr /><!-- ########## -->
+
+<article>
+<h1>Semantisch korrektes HTML …</h1>
+
+<figure>
+<img src="pix/semanticWebCandies.jpg" alt="semanticWebCandies" />
+<figcaption><a href="http://www.flickr.com/photos/39443894507@N01/4287666265/">Semantic Web Candies:</a> Foto von <a href="http://www.flickr.com/people/reedsturtevant/">Reed Sturtevant</a></figcaption>
+</figure>
+
+<p>… kann [vermutlich] so lange verstanden werden wie es Intelligenz auf der Erde gibt, weil dies sowohl von Menschen als auch von Maschinen gelesen werden kann!</p>
+<p>Im Internet befindliche Daten werden momentan auf vielen unabhängigen Servern gespeichert – hoffentlich bleibt der eine oder andere erhalten!</p>
+</article>
+
+<hr /><!-- ########## -->
+
+<article>
+<h1>Webdesign ist komplex!</h1>
+
+<figure>
+<img src="pix/complexity.jpg" alt="complexity" />
+<figcaption><a href="http://www.flickr.com/photos/22767170@N00/384027019">Complexity:</a> Foto von <a href="http://www.flickr.com/people/dominik99/">Domenico Nardone</a></figcaption>
+</figure>
+
+<h2 class="abstandU">Eine gute Website erfüllt – neben einem <q>schönen</q> Design auch folgende Kriterien:</h2>
+<ul>
+	<li><strong>Content is King: </strong>Das wichtigste auf einer erfolgreichen Website ist der Inhalt – deswegen kommen Besucher!</li>
+	<li><strong>Semantisches Web:</strong> Die Site ist <strong>semantisch</strong> korrekt aufgebaut, so dass Suchmaschine die Inhalte indizieren und somit einfach findbar machen</li>
+	<li><strong>Performance: </strong> Code, Text und Medien (Bilder, Sounds, Filme … ) sind für das schnelle Laden und Darstellen im Browser optimiert</li>
+	<li><strong>Responsive Design/Progressive Enhancement: </strong> Der <strong>Content</strong> der Website können auf unterschiedlichsten Systemen und Browsern empfangen – von alten Desktop-Rechnern bis hin zu modernen (Smart-)phones</li>
+	<li><strong>Usability:</strong> Unterschiedliche Menschen können sich einfach und intuitiv auf der Website zurechtfinden</li>
+	<li><strong>Accessibility:</strong> Menschen mit Behinderung kommen an die Inhalte ran</li>
+</ul>
+</article>
+
+<hr /><!-- ########## -->
+
+<article>
+<h1>Prinzipieller Aufbau einer HTML5-Datei</h1>
+<p>Nur das, was Ihr zwischen <span class="code">&#60;body&#62;</span> und <span class="code">&#60;/body&#62;</span> einfügt, wird im Browser-Fenster sichtbar.<br />
+Informationen im <span class="code">&#60;head&#62;</span>-Bereich sind Informationen für den Browser … <br />
+(Ausnahme: Der <span class="code">&#60;title&#62;</span> wird am oberen Rand des Browser-Fensters angezeigt!)</p>
+
+<div class="source">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=de&gt;
+    &lt;head&gt;
+    	&lt;meta charset=utf-8&gt;    
+        &lt;title&gt;Hier steht der Titel&lt;/title&gt;    
+    &lt;/head&gt;    
+    &lt;body&gt;
+        &lt;p&gt;Nur was im &lt;q&gt;body&lt;/q&gt; steht, wird im Browserfenster sichtbar!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<h2>Somit wird im Webbrowser nur folgendes angezeigt:</h2>
+
+<div class="demo">Nur was im „body“ steht, wird im Browserfenster sichtbar!</div>
+
+</article>
+
+<hr /><!-- ########## -->
+
+<article>
+<h1>Grundlegende Syntax von CSS</h1>
+Die nachfolgende Regel setzt sich aus dem <strong>Selektor</strong>, der die gewünschten Elemente selektiert (auswählt) und einer <strong>Eigenschaft</strong> sowie dem ihr zugewiesenen <strong>Wert</strong> zusammen:
+<div class="source">
+<pre>
+/* einzeilig */
+<strong>Selektor</strong> {Eigenschaft: Wert;}
+<strong>Selektor</strong> {Eigenschaft_1: Wert; Eigenschaft_2: Wert; Eigenschaft_3: Wert;}
+
+/* mehrzeilig */
+<strong>Selektor</strong> {
+   <span style="color:red">/* hinter jedem Eigenschaft-Wert-Paar muss ein Bindestriche stehen! */</span>
+   Eigenschaft_1: Wert; 
+   Eigenschaft_2: Wert;
+   &#8230;
+   Eigenschaft_x: Wert;
+}
+</pre>
+</div>
+
+<h3>Beispiele:</h3>
+
+<div class="source">
+<pre>
+<strong>p</strong> {color:red;}
+<strong>strong</strong> {color:blue;text-decoration:underline;background-color:grey;}
+<strong>h1</strong> {
+   font-family:Arial;
+   font-size:1.3em;
+}
+</pre>
+</div>
+
+<p><em>CSS ist es egal, ob Ihr alles in einer Zeile schreibt oder jedes Eigenschaft/Wert-Paar auf einer eigenen Zeile – macht es so, dass es für Euch übersichtlicher ist!</em></p>
+
+</article>
+
+
+<hr /><!-- ########## -->
+
+</div><!-- /wrap -->
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script>!window.jQuery && document.write('<script src="../../meta/core/js/jquery-1.4.2.min.js"><\/script>')</script>
+<script src="../../meta/core/js/thias.js"></script>
+
+</body>
+</html>

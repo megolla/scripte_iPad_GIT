@@ -57,6 +57,9 @@ article.sichtbar {
     background-color: transparent;
     display: block !important;
     min-height: inherit !important;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	-moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 img {
