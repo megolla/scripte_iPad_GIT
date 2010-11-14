@@ -7,7 +7,7 @@
 
     @file       basic.css
     @version    1.0
-    @date       2010-10-16
+    @date       2010-11-14
     @author         Matthias Edler-Golla <meg@wachenfeld-golla.de>
 
     Copyright (c) 2010 Wachenfeld + Golla, Buero fuer Gestaltung <http://wachenfeld-golla.de>
@@ -40,6 +40,7 @@ h1#titel {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: .3em 0 0 7px;
+    cursor: help;
 }
 
 div#wrap {
@@ -290,6 +291,27 @@ div#warnung p {
     width: 20em;
     margin: 0 auto;
     cursor: pointer;
+}
+
+/* @end */
+
+/* @group hilfe */
+
+div#hilfe {
+	position: absolute;
+    width: 100%;
+    top: 3%;
+    left: 0;
+    z-index: 100;
+}
+
+div#hilfe article.hilfe {
+	width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255,250,150,.9);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
 }
 
 /* @end */

@@ -5,7 +5,7 @@
 
 	@file 		thias.js
 	@version 	1.0
-	@date 		2010-10-12
+	@date 		2010-11-14
 	@author 	Matthias Edler-Golla <meg@wachenfeld-golla.de>
 
 	Copyright (c) 2010 Wachenfeld + Golla, Buero fuer Gestaltung <http://wachenfeld-golla.de>
@@ -48,6 +48,7 @@ $(function(){
 		
 		if (event.keyCode == '32') { // Space
 			$('div#inhaltsangabe').toggle('fast');
+			hilfeVerbergen();
 			return false;
 		}
 		
@@ -55,6 +56,7 @@ $(function(){
 			$('article:not(:first)').hide().removeClass('sichtbar');
 			$('article:first').fadeIn(600).addClass('sichtbar');
 			warnungVerbergen();
+			hilfeVerbergen();
 			aktuelleArtikelNummerEintragen();
 		}
 		
@@ -70,9 +72,38 @@ $(function(){
 				$('article.sichtbar').addClass('pointerCursor');
 			}
 		}
+		
+		// Aufruf der Seite mit den Tastatur-Angaben
+		// bei Safari = 189, bei Firefox 0
+		if (event.keyCode == '189' || event.keyCode == '0') { // Fragezeichen
+			hilfeZeigen();
+		}
+		
 	});
-
 });
+
+$(function(){
+	$('h1#titel').click(function(){
+		hilfeZeigen();
+	});
+});
+
+function hilfeZeigen(){
+	if ($('div#hilfe').length == 0) { // existiert also noch nicht
+			$('div#wrap').append('<div id="hilfe"></div>');
+			$('div#hilfe').hide();
+	}
+	
+	// hilfe sichtbar/unsichtbar
+	$('div#hilfe').toggle('fast');
+	
+	$('div#hilfe').load('../../meta/core/hilfe.html article.hilfe');
+}
+
+
+function hilfeVerbergen(){
+	$('div#hilfe article').fadeOut('slow');
+}
 
 function ArtikelAustauschen(bisherArtikel, neuArtikel){
 	$(bisherArtikel).hide().removeClass('sichtbar');
@@ -192,6 +223,8 @@ function weiterGehen(){
 		//alert ('letzter Slide der Präsentation!');
 		warnungZeigen('letzter Slide der Präsentation…');
 	}
+	
+	hilfeVerbergen();
 }
 
 // einen Slide zurück, wenn noch nicht auf Slide 0
@@ -211,6 +244,8 @@ function zurueckGehen(){
 		//alert ('erste Slide der Präsentation erreicht!');
 		warnungZeigen('erster Slide der Präsentation…');
 	}
+	
+	hilfeVerbergen();
 }
 
 // links bekommen eigene klasse, damit diese in neuem fenster geöffnet werden
